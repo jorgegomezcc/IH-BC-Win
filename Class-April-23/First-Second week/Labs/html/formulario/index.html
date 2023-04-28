@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../css/basicos-css/style.css">
+
+
+
+</head>
+<body>
+    
+    <!-- header -->
+
+    <header> 
+        <h1>Laboratorio Formulario</h1>
+    </header>
+
+    <section>
+       
+        <table border="1px">
+
+            <!-- Titulo -->
+
+            <h2>Formulario Viaje a España</h2>            
+            <form id="formrequest">
+            <tr>
+            <td>
+
+                <!-- Nombre -->
+
+                <div>
+
+                    <label for="name">Nombre</label>
+                    <input type="text" 
+                    id="name" 
+                    placeholder="Introduce tu nombre aqui"
+                    >
+
+                </div>
+            </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <!-- Apellido -->
+
+                    <div>
+
+                        <label for="Lastname">Apellido</label>
+                        <input type="text" 
+                        name="Lastname" 
+                        id="lastname" 
+                        placeholder="Introduce tu apellido aqui"
+                        >
+
+                    </div>
+                </td>    
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- Fecha de nacimiento -->
+
+                    <div>
+
+                        <label for="Birthday">Fecha de Nacimiento</label>
+                        <input 
+                        type="date" 
+                        name="birthday" 
+                        id="birthday"
+                        >
+
+                    </div>
+                </td>
+            </tr>        
+
+            <tr>
+                <td>
+                    <!-- Correo electronico -->
+                    
+                    <div>
+
+                        <label for="email">Correo Electronico</label>
+                        <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Introduce aqui tu email"
+                        >
+
+                    </div>
+                </td>
+            </tr>      
+            
+            <tr>
+                <td>
+                    <!-- Fecha de Viaje -->
+
+                    <div>
+
+                        <label for="traveldate">Fecha de Viaje</label>
+                        <input 
+                        type="datetime" 
+                        name="traveldate" 
+                        id="traveldate"
+                        min="2023-04-18"
+                        >
+
+                    </div>
+                </td>                               
+            </tr> 
+            
+            <tr>
+                <td>
+                    <!-- Motivo de viaje -->
+
+                    <div>
+
+                        <label for="travelreason">Motivo del Viaje</label> <br>
+                        <input 
+                        type="radio" 
+                        name="travelreason" 
+                        id="treason1"
+                        >Ocio <br>
+
+                        <input 
+                        type="radio" 
+                        name="travelreason" 
+                        id="treason1"
+                        >Trabajo <br>
+
+                        <input 
+                        type="radio" 
+                        name="travelreason" 
+                        id="treason1"
+                        >Visita Familiar <br>
+
+                    </div>
+                </td>
+            </tr>
+
+            </form>
+        </table>
+    </section>
+
+    <!-- end -->
+
+</body>
+</html>
