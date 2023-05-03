@@ -20,5 +20,19 @@ h1 {
     font-size: 60px;
 }
 
+#Description {
+
+    
+    align-items: center;
+}
+
 #Description p {
+
+    display: inline-flexbox;
+    
+}
+
+#Description img {
+    align-items: center;
+    height: 50px;
 }
