@@ -1,0 +1,17 @@
+Verdadero o Falso: CSS es un lenguaje de programación. ¿Por qué?
+No, es un lenguaje de estilo, se utiliza para describir / estilar un documento html.
+Css por si solo no puede crear "codigo" 
+
+¿Para qué se utiliza CSS?
+Para dar "estilos" y formatear documentos html
+
+
+¿Cómo puedes agregar estilos a tu proyecto HTML?
+Mediante css y sus atributos
+p.e:
+
+body {
+    background-color: red;
+    font-size: 14px
+}
+

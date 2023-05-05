@@ -1,0 +1,27 @@
+div {
+    color: pink;
+}
+
+#item1 {
+    color: red
+}
+
+.item2 {
+    color: blue;
+}
+
+li {
+    color: green;
+}
+
+h1 {
+    color: forestgreen;
+  }
+   
+  h2 {
+    color: #008080;
+  }
+   
+  p {
+    color: rgb(255, 192, 203);
+  }
