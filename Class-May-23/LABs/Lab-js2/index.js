@@ -126,6 +126,6 @@ function avr(arrayMixto) {
     } else if (typeof arrayMixto === "string") {
     
     }
-
     
-}
+};
+
