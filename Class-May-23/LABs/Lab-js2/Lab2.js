@@ -191,4 +191,60 @@ console.log('Iteración #5: Arreglos únicos');
 
 const words2 = ['crab','poison','contagious','simple','bring','sharp','playground','poison','communion','simple','bring'];
 
+function uniquifyArray(wordsArray) {
+    if(wordsArray.length === 0) return null;
+    let uniqueArray = [];
+    let x = 0;
+    for(let i = 0 ; i < wordsArray.length ; i++){
+      if(uniqueArray.indexOf(wordsArray[i]) === -1){
+        uniqueArray[x] = wordsArray[i];
+        x++;
+      }
+    }
+    return uniqueArray;
+  }
+  console.log(uniquifyArray(words2))
 
+
+console.log('Iteración #6: Buscar elementos');
+
+  // Iteración #6: Buscar elementos
+// Vamos a crear una simple búsqueda en el array.
+
+// Declare una función llamada doesWordExist que recibirá un array de palabras como un argumento, y una palabra a buscar como el otro. Devuelve true si existe, en caso contrario, devuelve false. No utilice indexOf para esta función.
+
+// Puede utilizar el siguiente array para probar su solución:
+
+const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist(wordsArray, wordToFind) {
+    let result = false;
+    for(let i = 0 ; i < wordsArray.length ; i++){
+      if(wordToFind === wordsArray[i]){
+        result = true;
+      }
+    }
+    return result;
+  }
+  console.log(doesWordExist(wordsFind, "matter"))
+
+
+console.log('Iteración #7: Contar la repetición');
+
+// Iteración #7: Contar la repetición
+// Declare una función llamada howManyTimes que tomará un array de palabras como primer argumento, y una palabra a buscar como segundo argumento. La función devolverá el número de veces que esa palabra aparece en el array.
+
+// Puede utilizar la siguiente matriz para probar su solución:
+
+const wordsCountRepeat = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function howManyTimes(wordsArray, wordToFind) {
+    let result = 0;
+    for(let i = 0 ; i < wordsArray.length ; i++){
+      if(wordToFind === wordsArray[i]){
+        result++;
+      }
+    }
+    return result;
+  }
+  console.log(howManyTimes(wordsCountRepeat, "trouble"))
