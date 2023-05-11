@@ -32,7 +32,7 @@ const findLongestWord = (arrayDePalabras) => {
             palabraMasLarga = arrayDePalabras[i]
         }
     }
-    return palabraMasLarga  
+    return palabraMasLarga
 }
 
 console.log(findLongestWord(words))
@@ -78,9 +78,9 @@ const sum = (arrayMixto) => {
     if (arrayMixto === 0) return null; //Condicionar la matriz en caso de matriz vacia
         let sumaMixta = 0; //creamos la variable inicializada en cero que contendra la suma del array de numeros
     for (let i = 0; i < arrayMixto.length; i++) {  //creamos el loop
-        let elemento = arrayMixto[i]; 
+        let elemento = arrayMixto[i];
         if (typeof elemento === 'string') { //Nos encargamos de asignar un valor numerico a los strings
-            sumaMixta += elemento.length; 
+            sumaMixta += elemento.length;
         }
         else if( typeof elemento === true ) { //Nos encargamos de dar un valor numerico al booleano
         sumaMixta += 1
@@ -92,7 +92,7 @@ const sum = (arrayMixto) => {
         }
     }
     return sumaMixta; //retornamos la variable de la suma
-}; 
+};
 
 console.log(sum(mixedArr)); //imprimimos la funcion
 
@@ -134,7 +134,7 @@ const averageNumbers1 = (arrayNumeros2) => {
     for (let i = 0; i < arrayNumeros2.length; i++) {
         resultado2 += arrayNumeros2[i]
     }
-    console.log(resultado2 / arrayNumeros2.length);    
+    console.log(resultado2 / arrayNumeros2.length);
     return resultado2 / arrayNumeros2.length;
 };
 
@@ -152,5 +152,43 @@ console.log("Matriz de cadenas");
 const words1 = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 const averageWordLength = (arrayDePalabras1) => {
-    
+    if ( arrayDePalabras1 === 0 ) return null;
+    let sumaCaracteres = 0;
+    for (let i = 0; i < arrayDePalabras1.length; i++) {
+        sumaCaracteres += arrayDePalabras1[i].length
+    }
+    let resultadoTotal = sumaCaracteres / arrayDePalabras1.length;
+    console.log(resultadoTotal);
+    // return sumaCaracteres / arrayDePalabras1.length
+};
+
+averageWordLength(words1)
+
+// Bonus - Iteración #4.1: Una función genérica avg ()
+// Cree la función avg(arr) que recibe cualquier matriz mixta y calcula el promedio. Considere como array mixto un array lleno de números y/o cadenas y/o booleanos. Seguimos una lógica similar a la aplicada en la iteración 4.1. del bono 😉
+
+console.log('Bonus - Iteración #4.1: Una función genérica avg ()');
+
+const mixedArr1 = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+const avgArr = (arrayMixto1) => { //Creamos la funcion tipo flecha
+    if (arrayMixto1 === 0 ) return null;    
+    let mediaTotal = arrayMixto1.length;    //Creamos una variable en la que contamos la cantidad de datos que hay dentro
+    console.log( sum(mixedArr1) / mediaTotal) // Llamamos a la funcion creada anteriormente donde calculabamos la suma total de valores dentro del array y la dividimos por la variable creada antes
 }
+
+avgArr(mixedArr1)   //Llamamos a la funcion y nos da el resultado
+
+console.log('Iteración #5: Arreglos únicos'); 
+
+// Iteración #5: Arreglos únicos
+
+// Tome el siguiente array, elimine los duplicados y devuelva un nuevo array. Es más que probable que quieras comprobar el método indexOf Array.
+
+// Hazlo en forma de una función uniquifyArray que reciba un array de palabras como argumento.
+
+// Puede utilizar el siguiente array para probar su solución:
+
+const words2 = ['crab','poison','contagious','simple','bring','sharp','playground','poison','communion','simple','bring'];
+
+
