@@ -64,13 +64,14 @@ function orderAlphabetically(moviesArray) {
 
 orderAlphabetically(movies)
 
-// BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
-function turnHoursToMinutes(moviesArray) {
-  
-}
+// // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
+// function turnHoursToMinutes(moviesArray) {
+//   if (moviesArray-length === 0) return 0;
 
-// BONUS - Iteration 8: Best yearly score average - Best yearly score average
-function bestYearAvg(moviesArray) {}
+// }
+
+// // BONUS - Iteration 8: Best yearly score average - Best yearly score average
+// function bestYearAvg(moviesArray) {}
 
 
 
