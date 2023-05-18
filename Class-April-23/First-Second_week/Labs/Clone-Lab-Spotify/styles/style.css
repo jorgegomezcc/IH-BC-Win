@@ -1,0 +1,164 @@
+/*
+Colors:
+
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* General stylshet */
+
+* {
+    margin: 0;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: "open sans", Arial, Helvetica, sans-serif;
+}
+
+/* Nav bar + logo */
+
+#navigation {
+    position: fixed;
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    float: right;
+    display: flex;
+    list-style: none;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+nav > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    color: #00B172;
+} 
+
+header img {
+    width: 10%;
+}
+
+/* banner zone */
+
+#image-banner {
+    height: 70rem;
+    background-image: url(../images/landing.jpeg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#image-banner p{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* What's on */
+
+
+#description h2 {
+    text-align: center;
+    text-decoration: underline #00B172;
+    text-underline-offset: 0.5rem;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+#div-container {
+    padding: 3rem 0;
+    display: flex;
+}
+
+.divcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center ;
+    height: 10rem;
+}
+
+.div-image {
+    width: 30%;
+}
+
+#div-container h3 {
+    font-size: 1.3rem;
+    color: #00B172;
+}
+
+#div-container p{
+    color: rgb(78, 78, 78);
+    font-weight: 200;
+    max-width: 12rem;
+}
+
+/* Kanye zone */
+
+
+#kanye {
+    background-image: url(/Class-April-23/First-Second_week/Labs/clone-lab-spotify/images/spotify-icon-white.png);
+    background-size: 7rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00B172;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3%;
+    height: 40rem;
+}
+
+.spotlights {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2rem 8rem 2rem 2rem;
+    font-weight: 300;
+}
+
+.spotlights h3 {
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    padding: 0 0 1.5rem 0;
+
+}
+
+.spotlights h4 {
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+.kanye-playlist img {
+    width: 20rem;
+    margin: 2rem;
+    padding-left: 6rem;
+}
