@@ -30,19 +30,91 @@ body {
 
 /* ------------------------------ Navbar ------------------------------ */
 
-/* Your CSS code goes here */
+#nav-section {
+  padding: 5vmax 10vmax;
+}
 
-/* ------------------------------ Header ------------------------------ */
 
-/* Your CSS code goes here */
+#mid-nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+#nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: grey;
+  padding-right: 2rem;
+}
+
+#nav-links:hover {
+  color: aqua;
+}
+
+
+#contact-btn a {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem 2.1rem;
+}
+
+
+/* ------------------------------ Front Page ------------------------------ */
+
+#frontPage-section {
+  padding-left: 19vmax;
+  padding-right: 15vmax;
+}
+
+#frontPage {
+  display: flex;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+#customer-img {
+   height: 33rem;
+}
+
+#visa-img {
+  height: 20rem;
+}
+
+#approved-emoji-img {
+  height: 20rem;
+}
 
 /* ------------------------------ Partners ------------------------------ */
 
-/* Your CSS code goes here */
+#brands-img-container img {
+  width: 150px;
+}
 
 /* ------------------------------ Recent projects ------------------------------ */
+#api-cards-container {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+  align-items: center;
+  
+}
 
-/* Your CSS code goes here */
+.api-cards {
+  width: 300px;
+}
+
+
+.api-img {
+  height: 300px;
+  width: 300px;
+}
 
 /* ------------------------------ Client reviews ------------------------------ */
 
