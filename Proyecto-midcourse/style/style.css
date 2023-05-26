@@ -35,7 +35,7 @@ body {
 }
 
 
-#mid-nav {
+nav {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -49,7 +49,8 @@ body {
   padding-right: 2rem;
 }
 
-#nav-links:hover {
+#nav-links a:hover {
+  cursor: pointer;
   color: aqua;
 }
 
@@ -62,6 +63,9 @@ body {
   padding: 1rem 2.1rem;
 }
 
+#contact-btn a:hover{
+  background-color:gray;
+}
 
 /* ------------------------------ Front Page ------------------------------ */
 
@@ -108,8 +112,16 @@ h1 {
 
 .api-cards {
   width: 300px;
+  margin: 0 2rem 0 2rem;
 }
 
+/*código en caso de querer "recortar" la cantidad de texto mostrada en cada "card" */
+
+/* .line-limit p {
+  white-space: nowrap ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
 
 .api-img {
   height: 300px;
@@ -130,7 +142,33 @@ h1 {
 
 /* ------------------------------ Footer ------------------------------ */
 
-/* Your CSS code goes here */
+footer {
+  padding: 8rem 26rem;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#footer-logo p {
+  font-weight: 200;
+  color: grey;
+  padding-top: 2rem;
+}
+#footer-logo img {
+  height: 2rem;
+}
+
+#footer-links a {
+  font-weight: 500;
+  color: blue;
+  text-decoration: none;
+  padding-right: 2rem;
+
+}
 
 /* -------------------------------------------------------------------------- */
 /* ------------------------------ PROJECT html ------------------------------ */

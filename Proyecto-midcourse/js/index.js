@@ -10,8 +10,8 @@ const getApiContent = () => {
     fetch("https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects")
     .then((response) => response.json())
         .then((res) => {
-            for (let i = 1; i < 4; i++) {
-                document.querySelector('#api-cards-container').innerHTML += `<div class="api-cards">
+            for (let i = 0; i < 3; i++) {
+                document.querySelector('#api-cards-container').innerHTML += `<div class="api-cards line-limit">
                 <img class="api-img" src="./images/projects-section/${res[i].uuid}.jpg" alt="Project ${res[i].uuid} img">
                 <h3>${res[i].name}</h3>
                 <h4>${res[i].description}</h4>
