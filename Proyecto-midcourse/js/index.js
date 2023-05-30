@@ -17,7 +17,7 @@ const getApiContent = () => {
                 <h4>${res[i].description}</h4>
                 <p>${res[i].content}</p>
                 <p>${res[i].completed_on}</p>
-                <a href="project.html?p=${res[i].uuid}">Learn More</a>
+                <p><a id="learn-more" href="project.html?p=${res[i].uuid}">Learn More</a></p>
                 </div>`;
             }
         })
