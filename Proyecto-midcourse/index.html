@@ -43,8 +43,8 @@
                 <p>Circle is a digital design and development studio.
                     We design and develop astonishing websites and mobile apps.</p>
                 <div id="fp-buttons-container" >
-                    <a id="fp-btn-blue" href="">Get in touch</a>
                     <a id="fp-btn-link" href="">See our work</a>
+                    <a id="fp-btn-blue" href="">Get in touch</a>
                 </div>
             
             </div>
@@ -81,24 +81,18 @@
            <!--  <div class="api-cards" >
                 <img class="api-img" src="./images/projects-section/1.jpg" alt="Project 1 img">
                 <h3></h3>
-                <h4></h4>
-                <p></p>
                 <p></p>
                 <a href="">Learn More</a>
             </div>
             <div class="api-cards" >
                 <img class="api-img" src="./images/projects-section/2.jpg" alt="Project 2 img">
                 <h3></h3>
-                <h4></h4>
-                <p></p>
                 <p></p>
                 <a href="">Learn More</a>
             </div>
             <div class="api-cards" >
                 <img class="api-img" src="./images/projects-section/3.jpg" alt="Project 3 img">
                 <h3></h3>
-                <h4></h4>
-                <p></p>
                 <p></p>
                 <a href="">Learn More</a>
             </div> -->
@@ -114,12 +108,16 @@
                 <img src="./images/testimonial-section/memoji-2.png" alt="memoji 2 image">
             </div>
             <div id="testimonials">
-                <h3>Hear What Our Clients Have to Say</h3>
-                <p>"Circle helped us through every stage of our startup.
+                    <h2>Hear What Our Clients Have to Say</ h3>
+                    <p>"Circle helped us through every stage of our startup.
                     We really enjoyed working with you." </p>
-                <img id="profile-img" src="./images/testimonial-section/profile.png" alt="A customer Profile image">
-                <p>Kristin Watson</p>
-                <p>Booking.com</p>
+                <div id="profile-review">        
+                    <img id="profile-img" src="./images/testimonial-section/profile.png" alt="A customer Profile image">
+                    <div>
+                        <p>Kristin Watson</p>
+                        <p>Booking.com</p>
+                    </div>
+                </div>
             </div>
             <div id="emojis-2">
                 <img src="./images/testimonial-section/memoji-3.png" alt="memoji 3 image">
@@ -159,10 +157,12 @@
 <!-- Help Form Section -->
 
     <section id="help-form">
-        <h2>Do you have any questions?</h2>
-        <p>Let us help you!</p>
-        <input id="email-form" type="tex" placeholder="Enter your email">
-        <button id="subscribe-btn">Subscribe</button>
+        <div id="helpForm-container">
+            <h2>Do you have any questions?</    h2>
+            <p>Let us help you!</p>
+            <input id="email-form"  type="tex" placeholder="Enter    your email">
+            <button     id="subscribe-btn">Subscribe</button>
+        </div>
     </section>
 
 <!-- Footer Section -->
@@ -185,12 +185,12 @@
             </div>
         </footer>
     </div>
-<!-- Scroll to up section -->
-    <section>
+<!-- Scroll to up -->
+    
         <div id="btnContainer">
         <h3 onclick="toUpFunction()" id="scrollBtn" >Scroll to up ↑ </h3>
         </div>
-    </section>
+    
 <!-- Scripts zone     -->
 <script src="./js/index.js"></script>
 <script src="./js/scrollButton.js"></script>

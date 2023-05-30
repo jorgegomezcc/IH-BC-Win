@@ -15,6 +15,12 @@ body {
   background-color: #f2f4fc;
 }
 
+section,
+footer {
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 
 /* ------------------------------------------------------------------------ */
@@ -32,7 +38,8 @@ body {
 /* ------------------------------ Navbar ------------------------------ */
 
 #nav-section {
-  margin: 5vmax 10vmax;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 
@@ -71,11 +78,6 @@ nav {
 
 /* ------------------------------ Front Page ------------------------------ */
 
-/* #frontPage-section {
-  padding-left: 19vmax;
-  padding-right: 15vmax;
-} */
-
 #frontPage {
   display: flex;
   text-align: center;
@@ -96,6 +98,26 @@ h1 {
 
 #approved-emoji-img {
   height: 20rem;
+}
+
+#fp-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+#fp-btn-blue {
+  background-color:#072ac8;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem 1rem;
+}
+
+#fp-btn-link {
+  color: grey;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem 1rem;
 }
 
 /* ------------------------------ Partners ------------------------------ */
@@ -124,6 +146,7 @@ h1 {
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
+  margin-bottom: 8rem;
 }
 
 .title {
@@ -147,11 +170,12 @@ h1 {
   text-decoration: none;
 }
 
-.api-cards {
+.api-cards {  
+  width: 330px;
+  height: 500px; 
   background-color: white;
   margin: 0 1.5rem 2rem 0;
   text-align: left;
-  flex-basis: 1rem;
 }
 
 /*código en caso de querer "recortar" la cantidad de texto mostrada en cada "card" */
@@ -169,7 +193,59 @@ h1 {
 
 /* ------------------------------ Client reviews ------------------------------ */
 
-/* Your CSS code goes here */
+#customer-box {
+  background-color: #292e47;
+  background-image: url(../images/testimonial-section/orbit.png);
+  background-size: cover;
+  height: 500px;
+  max-width: 1200px;
+  
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+#testimonials h2 {
+  font-weight: 700;
+  color: white;
+
+}
+
+#testimonials p:first-child{
+  color: gold;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+#testimonials p:nth-child(2){
+  color: cornflowerblue;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#testimonials p:nth-child(3) {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+#profile-review div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#profile-review >p {
+  color:aqua;
+}
+
+#profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
 
 /* ------------------------------ Services ------------------------------ */
 
@@ -223,7 +299,8 @@ h1 {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin: 8rem 10rem 8rem 10rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 #footer-logo p {
@@ -236,7 +313,7 @@ h1 {
 }
 
 #footer-links {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 2.5rem;
@@ -314,7 +391,7 @@ margin: 3rem 2rem 5rem 3rem;
 #visa-img {
   display: none;
 }
-}
+
 
 #approved-emoji-img {
   display: none;
@@ -337,6 +414,7 @@ margin: 3rem 2rem 5rem 3rem;
 .api-cards {
   margin: 0 0rem 1rem 0rem;
   width: 300px;
+  height: 470px;
 }
 
 /* Brands */
@@ -368,12 +446,10 @@ margin: 3rem 2rem 5rem 3rem;
 /* footer mobile */
 
   #footer-container {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
-    margin: 8rem 2rem 8rem 2rem;
+    margin: 8rem 1rem 8rem 2rem;
   }
 
   #footer-logo p {
@@ -388,6 +464,23 @@ margin: 3rem 2rem 5rem 3rem;
     margin: auto;
     height: 2rem;
   }
+  
+  #footer-links {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    text-align: center;
+  }
+
+/* Help form section */
+
+ #help-form {
+  background-color: gold;
+  height: 360px;
+ }
+ 
+
+
+}
 
 
 
