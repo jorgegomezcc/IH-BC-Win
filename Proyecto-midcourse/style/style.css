@@ -71,15 +71,15 @@ nav {
 
 /* ------------------------------ Front Page ------------------------------ */
 
-#frontPage-section {
+/* #frontPage-section {
   padding-left: 19vmax;
   padding-right: 15vmax;
-}
+} */
 
 #frontPage {
   display: flex;
   text-align: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -103,18 +103,18 @@ h1 {
 
 #brands-img-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 #brands-img-container img {
   width: 150px;
-  filter: grayscale(1)
-
+  filter: grayscale(1);
 }
 
 #brands-img-container img:hover {
-  filter: grayscale(0)
+  filter: grayscale(0);
 }
 
 /* ------------------------------ Recent projects ------------------------------ */
@@ -173,10 +173,10 @@ h1 {
 
 /* ------------------------------ Services ------------------------------ */
 
-#services h2 {
+/* #services h2 {
   font-size: 2rem;
   margin: 1vmax 10vmax;
-}
+} */
 
 #services-card-container  {
   display: flex;
@@ -218,12 +218,7 @@ h1 {
 
 /* ------------------------------ Footer ------------------------------ */
 
-/* footer {
-  padding: 8rem 26rem;
-} */
-
 #footer-container {
-  /* width: 60%; */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -287,8 +282,116 @@ h1 {
 
 /* ------------------------- Smaller than 766px (mobile) ------------------------- */
 @media (max-width: 766px) {
-  /* Your CSS code goes here */
+
+/* Nav bar mobile */
+
+
+/* Front Page */
+
+#frontPage-section {
+margin: 3rem 2rem 5rem 3rem;
 }
+
+#frontPage div {
+  width: 95%;
+}
+
+#text-box > h1 {
+  font-size: 1.8rem;
+}
+
+#text-box > p {
+  color: grey;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 30px 0 50px 0;
+}
+
+#customer-img {
+   height: 220px;
+}
+
+#visa-img {
+  display: none;
+}
+}
+
+#approved-emoji-img {
+  display: none;
+}
+
+
+
+/* Projects mobile */  
+
+
+#api-cards-container {
+  flex-direction: column;
+}
+
+.api-img {
+  height: 210px;
+  width: 300px;
+}
+
+.api-cards {
+  margin: 0 0rem 1rem 0rem;
+  width: 300px;
+}
+
+/* Brands */
+
+#brands-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 1rem 0rem 1rem;
+}
+
+
+#brands-img-container img {
+  display: block;
+  margin: auto;
+  filter: grayscale(0);
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+/* services mobile */
+
+
+.services-cards {
+  width: 300px;
+  margin: 0 1rem 1rem 1rem;
+}
+
+/* footer mobile */
+
+  #footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 8rem 2rem 8rem 2rem;
+  }
+
+  #footer-logo p {
+    font-weight: 200;
+    color: grey;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  #footer-logo img {
+    display: block;
+    margin: auto;
+    height: 2rem;
+  }
+
+
+
+
 
 /* ------------------------------ Hamburguer menu ------------------------------ */
 
