@@ -13,16 +13,21 @@
 
 <section id="nav-section">
     <header id="nav-bar">
-        <nav id="mid-nav">
-            <img src="./images/logos/circle.svg" alt="Circle_logo">
-            <ul>
-                <li>Home</li>
-                <li>Project Page - Simple</li>
-                <li>Projects</li>
-                <li>Services</li>
-                <li>About</li>
-            </ul>
-            <a id="nav-contac" href="./contactUs.html">Contac Us</a>
+        <nav>
+            <div id="nav-logo">
+                <a href="index.html"><img src="./images/logos/circle.svg" alt="Circle_logo"></a>
+            </div>
+            <div id="nav-links">
+                <ul>
+                    <a href="#home">Home</a>
+                    <a href="#project-title">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="./aboutUs.html">About</a>
+                </ul>
+            </div>
+            <div id="contact-btn">
+                <a href="./contactUs.html">Contac Us</a>
+            </div>
         </nav>
     </header>
 </section>
@@ -31,24 +36,28 @@
 <!-- Cards API Section -->
 
 <section id="projects-section">
-    <div id="project-title">
-        <h2>Recent Projects</h2>
+     <div id="post-title">
+        <!-- <h2>Recent Projects</h2>
+    </div>
+    <div id="project-subtitle">
+        <h2></h2>
+        <h3></h3>
     </div>
     <div id="api-cards-container">
         <div class="api-cards" >
-           <!--  <div class="api-cards" >
-                <img class="api-img" src="./images/projects-section/1.jpg" alt="Project 1 img">
+            <div class="api-post" >
+                <img class="api-img" src="./images/projects-section/1.jpg" alt="Project x img">
                 <h3></h3>
-                <h4></h4>
-                <p></p>
                 <p></p>
             </div>
+        </div> -->  
+    </div> 
+    
+    <div class="random-API-projects">
             <h2>Other Projects</h2>
-            <div class="api-cards" >
-                <img class="api-img" src="./images/projects-section/1.jpg" alt="Project 1 img">
+        <!-- <div class="api-cards" >
+                <img class="api-img" src="./images/projects-section/1.jpg" alt="Project x img">
                 <h3></h3>
-                <h4></h4>
-                <p></p>
                 <p></p>
             </div> -->
     </div>
@@ -58,31 +67,31 @@
 <!-- Footer Section -->
 
 <footer>
-    <div id="footer-logo">
-        <img src="./images/logos/circle.svg" alt="Circle logo image">
-    </div>    
-    <div id="footer-add">
-        <p>2972 Westheimer Rd. Santa Ana,
-            Illinois 85486</p>
-    </div>
-    <div id="footer-links">
-        <ul id="ul-links">
-            <li>Team</li>
-            <li>Services</li>
-            <li>About Us</li>
-            <li>Press</li>
-            <li>Projects</li>
-            <li>Privacy Policy</li>
-        </ul>
-    </div>
-</footer>
+    <div id="footer-container">
+        <div id="footer-logo">
+            <img src="./images/logos/circle.svg" alt="Circle logo image">
+        <!-- </div>    
+        <div id="footer-add"> -->
+            <p>2972 Westheimer Rd. Santa Ana, <br> Illinois 85486</p>
+        </div>
+        <div id="footer-links">
+                <a href="error404">Team</a>
+                <a href="#services">Services</a>
+                <a href="aboutUs.html">About Us</a>
+                <a href="error404">Press</a>
+                <a href="#project-title">Projects</a>
+                <a href="error404">Privacy Policy</a>
+        </div>
+    </footer>
+</div>
 
 <div>
     <h3 onclick="toUpFunction()" id="scrollBtn" >Scroll to up ↑ </h3>
 </div>
 
 <!-- Scripts zone     -->
-<script src="./js/index.js"></script>
+<script src="./js/project.js"></script>
+<!-- <script src="./js/index.js"></script> -->
 <script src="./js/scrollButton.js"></script>
 
 </body>

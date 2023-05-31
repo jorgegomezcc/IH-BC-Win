@@ -1,5 +1,5 @@
 //How To Test API response
-// fetch("https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects")
+// fetch("https://jsonplaceholder.typicode.com/posts")
 //     .then(res => res.json())
 //     .then(response =>
 //         console.log(response)

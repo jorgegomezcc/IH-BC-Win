@@ -23,7 +23,6 @@ footer {
 }
 
 
-
 /* ------------------------------------------------------------------------ */
 /* ------------------------------ INDEX html ------------------------------ */
 /* ------------------------------------------------------------------------ */
@@ -397,13 +396,7 @@ h1 {
 
 /* ------------------------- Smaller than 990px (tablet) ------------------------- */
 @media (max-width: 990px) {
-  /* Your CSS code goes here */
-}
-
-/* ------------------------- Smaller than 766px (mobile) ------------------------- */
-@media (max-width: 766px) {
-
-/* Nav bar mobile */
+/* Nav bar responsive */
 
 #nav-bar {
   margin: 0rem 6rem 1rem 6rem;
@@ -412,6 +405,16 @@ h1 {
 #nav-links {
   display: none;
 }
+
+#contact-btn {
+  display: none;
+}
+
+}
+
+/* ------------------------- Smaller than 766px (mobile) ------------------------- */
+@media (max-width: 766px) {
+
 
 /* Front Page mobile */
 
