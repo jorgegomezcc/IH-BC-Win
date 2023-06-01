@@ -7,82 +7,58 @@ let getUrl = new URL(window.location.href);
 //Get the ID value from url
 let getId = getUrl.searchParams.get('p');
 
+//Generate a Date
+let actualDate = new Date;
+let todayDate = actualDate.toDateString()
+
+console.log(todayDate);
+
 //Function with DOM manipulation to show the post from index page
 
-const postFromId = (postId) => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+const postFromId = (postId) => { //Put a variable that we put when we call the function 
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`) //Put the variable that contains the url id which in turn is the number of the api post from which we take the information
     .then(response => response.json())
     .then(data => {
-        document.querySelector('#post-title').innerHTML += `<h2>${data.title}</h2>
+        //Select the id of the element that I want to modify with querrySelector and add the html code with .innerHTML
+        document.querySelector('#post-title').innerHTML += `<h2>${data.title}</h2> 
 </div>
 <div id="project-subtitle">
 <h2>${data.title}</h2>
-<h3>Completed on </h3>
+<h3>Completed on ${todayDate} </h3>
 </div>
-<div id="api-cards-container">
-    <div class="api-cards" >
+<div id="api-cards-container-full">
+    <div class="api-card-solo" >
         <div class="api-post" >
-            <img class="api-img" src="./images/projects-section/${data.id}.jpg" alt="Project ${data.id} img">
+            <img class="api-img-solo" src="./images/projects-section/${data.id}.jpg" alt="Project ${data.id} img">
             <p>${data.body}</p>
         </div>
     </div>`;
 })
-    // .catch (error => console.log(error));
+     .catch (error => console.log(error));
 }
 
-postFromId(getId);
+postFromId(getId); //function call with variable that contains the ID from "?p=x" from URL
 
-// function getPosts(){
-//     return fetch("https://jsonplaceholder.typicode.com/posts")
-//     .then((response) => {
-//         if(response.ok)    
-//             return response.json()
-//         else
-//             throw Error("Failed to get Posts data");
-//     })
-//     .catch((error) => {
-//         console.log(error.message);
-//     })
-// }
+//Create a function with DOM that generate a random post from API 
 
-// function newRandomChild(parent, data){
-//     let newChild = document.createElement("div");
-//     newChild.className = "post";
-//     newChild = document.createElement("div");
-//     let i = Math.floor(Math.random() * 100);
-//     newChild.innerHTML = `
-//     <div class="article" id="${data[i].id}">    
-//         <h2>${data[i].title}</h2>
-//         <p>${data[i].body}</p>
-//         <a rel="stylesheet" href="http://127.0.0.1:5500/Projects/Project1/project.html?id=${data[i].id}">Read More</a>
-//     </div> 
-//     `;
-//     parent.appendChild(newChild);
-// }
+const getApiRandom = () => {
+    let i99 = Math.floor(Math.random() * 99 + 1) //create a variable that generated a random number from 1 to 99 for randomize the post
+    let img = Math.floor(Math.random() * 6 + 1) //create a variable that generated a random number from 1 to 6 for randomize the image
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+        .then((res) => { 
+                document.querySelector('#api-cards-random').innerHTML += `<div class="api-cards">
+                <img class="api-img" src="./images/projects-section/${img}.jpg" alt="Project ${res[i99].id} img">
+                <h3>${res[i99].title}</h3>
+                <p>${res[i99].body}</p>
+                <p><a id="learn-more" href="#">Learn More</a></p>
+                </div>`;
+        })
+        .catch((error) => console.log(error))
+    }
 
-// function newChildById(parent, data){
-//     // Obtener la URL actual
-//     var url = new URL(window.location.href);
-//     // Obtener el valor de un parámetro específico
-//     var id = url.searchParams.get('id');
-//     let newChild = document.createElement("div");
-//     newChild.className = "post";
-//     newChild = document.createElement("div");
-//     newChild.innerHTML = `
-//     <div class="main-article" id="${data[id-1].id}">    
-//         <h2>${data[id-1].title}</h2>
-//         <p>${data[id-1].body}</p>
-//         <p>Author: ${data[id-1].userId}</p>
-//     </div> 
-//     `;
-//     parent.appendChild(newChild);
-// }
+    //Call function 3 times to generate 3 random post
+getApiRandom();
+getApiRandom();
+getApiRandom();
 
-// getPosts().then((data) => {
-//     let projectsTabsParent = document.querySelector("#projectsTabs");
-//     let mainProjectParent = document.querySelector("#mainProject");
-//     newChildById(mainProjectParent,data);
-//     newRandomChild(projectsTabsParent,data);
-//     newRandomChild(projectsTabsParent,data);
-//     newRandomChild(projectsTabsParent,data);
-// })
