@@ -23,4 +23,3 @@ const getApiContent = () => {
     }
     
     window.addEventListener("load", getApiContent);
-    randomLink();
