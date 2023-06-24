@@ -1,5 +1,3 @@
-//----------- ALERT DONE/FAIL FORM INFO -----------//
-
 //Get the form
 
 const formElement = document.querySelector("#contactUs-form");
@@ -28,7 +26,7 @@ formElement.addEventListener('submit', event => {
             },               
             }
         )
-        //if we want how to know the status code number or if ok is true or false, just put this like that ".then(response => console.log(response))" and comment below
+        //if we want how to know the status number or if ok is true or false, just comment the other promises lines and just put this like that ".then(response => console.log(response))", that is how the console show you more information about, like methods state and more...
         .then((response) => {
 
             let name = document.forms["contactUsForm"]["fullName"].value;
@@ -60,24 +58,9 @@ const subscribeBtn = () => {
     })
 }
 
-//----------- LOADER SPINNER -----------//
-
-// Function to loading effect
-
-const loadSpinner = () => {
-    const loading = document.getElementById('lds-ring');
-    setTimeout(() => {
-      loading.style.display = 'none';    
-    }, 1800);
-  };
-
-  //Add listener, when load the page call the function
-
-  window.addEventListener("load", loadSpinner)
-
 //----------- RANDOMIZE HREF LINK IN "PROJECT-SIMPLE" NAV LINK -----------//
 
-//Funtion to generate random href link
+  //Funtion to generate random href link
 
 const randomLink = () => {
     let randomNumber = Math.floor(Math.random() * 3 + 1); //Generate random number variable from 1 to 3 to get a random principal post from the "Recent projects" section
@@ -87,5 +70,4 @@ const randomLink = () => {
 };
 
 //Call the function
-
 randomLink()

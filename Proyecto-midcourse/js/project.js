@@ -20,21 +20,19 @@ const postFromId = (postId) => { //Put a variable that we put when we call the f
     .then(response => response.json())
     .then(data => {
         //Select the id of the element that I want to modify with querrySelector and add the html code with .innerHTML
-        document.querySelector('#post-title').innerHTML += `
-            <h2>${data.title}</h2> 
-            </div>
-            <div id="project-subtitle">
-            <h2>${data.title}</h2>
-            <h3>Completed on ${todayDate} </h3>
-            </div>
-            <div id="api-cards-container-full">
-                <div class="api-card-solo" >
-                    <div class="api-post" >
-                        <img class="api-img-solo" src="./images/projects-section/${data.id}.jpg" alt="Project ${data.id} img">
-                        <p>${data.body}</p>
-                    </div>
-                </div>
-                `;
+        document.querySelector('#post-title').innerHTML += `<h2>${data.title}</h2> 
+</div>
+<div id="project-subtitle">
+<h2>${data.title}</h2>
+<h3>Completed on ${todayDate} </h3>
+</div>
+<div id="api-cards-container-full">
+    <div class="api-card-solo" >
+        <div class="api-post" >
+            <img class="api-img-solo" src="./images/projects-section/${data.id}.jpg" alt="Project ${data.id} img">
+            <p>${data.body}</p>
+        </div>
+    </div>`;
 })
      .catch (error => console.log(error));
 }
@@ -59,8 +57,7 @@ const getApiRandom = () => {
         .catch((error) => console.log(error))
     }
 
-//Call function 3 times to generate 3 random post
-
+    //Call function 3 times to generate 3 random post
 getApiRandom();
 getApiRandom();
 getApiRandom();

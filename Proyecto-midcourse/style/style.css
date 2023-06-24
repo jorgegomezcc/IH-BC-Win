@@ -84,7 +84,7 @@ footer {
 
 nav {
   margin: 5rem auto;
-  width: 80%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -95,7 +95,8 @@ nav {
   text-decoration: none;
   font-weight: 500;
   color: #6b708d;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 #nav-links a:hover {
@@ -103,6 +104,9 @@ nav {
   color:#5594f3;
 }
 
+.menu > li:last-child {
+  display: none;
+}
 
 #contact-btn a {
   background-color: #072ac8;
@@ -317,11 +321,6 @@ nav {
 .api-cards > h3,
 .api-cards > p {
   color:  #292e47;
-}
-
-.api-cards > h3,
-.api-cards > h4,
-.api-cards > p {
   padding: 0.5rem 1rem 1rem 1rem;
 }
 
@@ -610,6 +609,30 @@ nav {
   padding-right: 0.8rem;
 }
 
+#post-title > h2 {
+  font-size: 3.5rem;
+  color:#292e47;
+}
+
+#project-subtitle {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  width: 98%;
+}
+
+#project-subtitle > h2 {
+  color:#6b708d;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+#project-subtitle > h3 {
+  color:#6b708d;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
 .api-card-solo {  
   display: flex;
   justify-content: space-between;
@@ -749,9 +772,152 @@ nav {
 /* ----------------------------------------------------------------------------- */
 /* ------------------------------ About Us html ------------------------------ */
 /* ----------------------------------------------------------------------------- */
+#aboutUsTitle {
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+}
 
-/* Your CSS code goes here */
+#cards-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60rem;
+  width: 100%;
+}
 
+#about-cards-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 60rem;
+  width: 90%;
+}
+
+.about-cards {
+  width: 23rem;
+  height: 30rem;
+  perspective: 1000px;
+  margin: 2rem 0rem;
+}
+
+.img-front {
+  transform: rotateY(0deg);
+}
+
+.img-back {
+  color: white;
+  padding: 2rem;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+}
+
+#card1 .img-front {
+  background-image: url("/images/AboutUs-section/young-man.png");
+  height: 30rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+#card2 .img-front {
+  background-image: url("/images/AboutUs-section/young-woman.png");
+  height: 30rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-size: cover;
+}
+
+.img-front > h1 {
+  text-shadow: 1rem 0.7rem 0.25rem rgba(0, 0, 0, 0.5)
+}
+
+.img-back > h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.img-back > p {
+  font-size: 1rem;
+}
+
+.img-front,
+.img-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  border-radius: 20px;
+}
+
+.about-cards:hover .img-front {
+  transform: rotateY(180deg);
+}
+
+.about-cards:hover .img-back {
+  transform: rotateY(0deg);
+}
+
+#videos {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#videos > h2 {
+  font-size: 2.5rem;
+}
+
+#videos article {
+  width: 100%;
+  max-width: 60rem;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#videos iframe {
+  width: 90%;
+  max-width: 36rem;
+  height: 20rem;
+}
+
+.videoTags p {
+  padding: 0.5rem 0rem;
+}
+
+
+.videoTags h4 {
+  padding: 0.5rem 0rem;
+}
+
+#podcasts {
+  width: 90%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#podcasts > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#podcasts > iframe {
+  max-width: 36rem;
+}
 /* --------------------------------------------------------------------------- */
 /* ------------------------------ MEDIA QUERIES ------------------------------ */
 /* --------------------------------------------------------------------------- */
@@ -759,6 +925,13 @@ nav {
 /* ------------------------- Smaller than 990px (tablet) ------------------------- */
 
 @media (max-width: 990px) {
+
+  /* ------------------------- Spinner responsive ------------------------- */
+
+  #lds-ring div {
+    width: 300px;
+    height: 300px;
+  }
 
 /* ------------------------- Nav Bar responsive ------------------------- */
 
@@ -768,13 +941,22 @@ nav {
 
 nav {
     margin: 2rem auto;
+    width: 80%;
   }
 
 #nav-links a {
     color: #f2f4fc;
+    padding-right: 0;
+    padding-left: 0;
 }  
 
+
 /* ------------------------- Hamburger menu responsive ------------------------- */
+
+.menu > li:last-child {
+  display:block;
+  text-align: center;
+}
 
 .menu {
   position: absolute;
@@ -796,11 +978,12 @@ nav {
 }
 
 #menu-toggle:checked ~ .menu li {
-
+  border: 1px solid #6b708d;
   height: 2.5em;
   padding: 0.5em;
   transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 
 .menu > li {
   display: flex;
@@ -810,6 +993,7 @@ nav {
   width: 100%;
   color: white;
   background-color: #6b708d;
+  z-index: 9999;
 }
 
 .menu > li:not(:last-child) {
@@ -882,6 +1066,34 @@ nav {
 #random-projects-title h2 {
   font-size: 1.8rem;
   padding: 0;
+}
+
+.api-cards > p {
+  padding: 0.5rem 1rem 0.7rem 1rem;
+}
+
+/* ------------------------- Project html responsive ------------------------- */
+
+#post-title {
+  margin: auto;
+}
+
+#post-title > h2 {
+  font-size: 2.5rem;
+}
+
+#project-subtitle > h2 {
+  font-size: 1.3rem;
+}
+
+#project-subtitle > h3 {
+  font-size: 0.9rem;
+}
+
+/* ------------------------- About Us responsive ------------------------- */
+
+#card1 .img-back > p {
+  font-size: 0.9rem;
 }
 
 /* ------------------------- 404 responsive ------------------------- */
@@ -966,6 +1178,20 @@ nav {
   margin: 0 1rem 1rem 1rem;
   width: 300px;
   height: 470px;
+}
+
+/* ------------------------- Project html mobile ------------------------- */
+
+#post-title > h2 {
+  font-size: 1.8rem;
+}
+
+#project-subtitle > h2 {
+  font-size: 0.8rem;
+}
+
+#project-subtitle > h3 {
+  font-size: 0.6rem;
 }
 
 /* ------------------------- Review mobile ------------------------- */
@@ -1072,6 +1298,18 @@ nav {
 .contactUs-container > h1 {
   text-align: center;
   font-size: 2.5rem;
+}
+
+/* ------------------------- About Us mobile------------------------- */
+
+#podcasts > h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+#videos > h2 {
+  font-size: 1.5rem;
 }
 
 /* ------------------------- 404 mobile ------------------------- */
